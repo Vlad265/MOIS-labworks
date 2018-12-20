@@ -1,0 +1,244 @@
+elem_H
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [атом водорода] (* <- lang_ru;; *);
+    [hydrogen atom] (* <- lang_en;; *);;
+
+elem_O
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [атом кислорода] (* <- lang_ru;; *);
+    [oxygen atom] (* <- lang_en;; *);;
+
+elementary_particle
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [элементарная частица] (* <- lang_ru;; *);
+    [elementary particle] (* <- lang_en;; *);;
+
+functional_group
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [функциональная группа] (* <- lang_ru;; *);
+    [functional group] (* <- lang_en;; *);;
+
+molecule
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [молекула] (* <- lang_ru;; *);
+    [molecule] (* <- lang_en;; *);;
+
+nonorganic_compound
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [неорганическое соединение] (* <- lang_ru;; *);
+    [inorganic compound] (* <- lang_en;; *);;
+
+organic_compound
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [органическое соединение] (* <- lang_ru;; *);
+    [organic compound] (* <- lang_en;; *);;
+
+polarization
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [поляризация] (* <- lang_ru;; *);
+    [polarization] (* <- lang_en;; *);;
+
+pressure
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [давление] (* <- lang_ru;; *);
+    [pressure] (* <- lang_en;; *);;
+
+atomic_existence
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [атомарное существование] (* <- lang_ru;; *);
+    [atomic existence] (* <- lang_en;; *);;
+
+cilinder
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [цилиндр] (* <- lang_ru;; *);
+    [cilinder] (* <- lang_en;; *);;
+
+concept_circle
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [окружность] (* <- lang_ru;; *);
+    [circle] (* <- lang_en;; *);;
+
+concept_straight_line
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [прямая] (* <- lang_ru;; *);
+    [straight line] (* <- lang_en;; *);;
+
+concept_countable_set_of_points
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [счётное множество точек] (* <- lang_ru;; *);
+    [countable set of points] (* <- lang_en;; *);;
+
+concept_half_plane
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [полуплоскость] (* <- lang_ru;; *);
+    [half plane] (* <- lang_en;; *);;
+
+concept_segment
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [отрезок] (* <- lang_ru;; *);
+    [segment] (* <- lang_en;; *);;
+
+concept_geometric_point
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [точка] (* <- lang_ru;; *);
+    [point] (* <- lang_en;; *);;
+
+chemical_element
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [химический элемент] (* <- lang_ru;; *);
+    [chemical element] (* <- lang_en;; *);;
+
+hydroxide_ion
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [гидроксид-ион] (* <- lang_ru;; *);
+    [hydroxide-ion] (* <- lang_en;; *);;
+
+nrel_covalent_bond
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [ковалентная связь*] (* <- lang_ru;; *);
+    [covalent bond*] (* <- lang_en;; *);;
+
+nrel_center_of_circle
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [центр окружности*] (* <- lang_ru;; *);
+    [center of circle*] (* <- lang_en;; *);;
+
+nrel_parallelism
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [параллельность*] (* <- lang_ru;; *);
+    [parallelism*] (* <- lang_en;; *);;
+
+nrel_axis_of_cylinder
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [ось цилиндра*] (* <- lang_ru;; *);
+    [axis of cylinder*] (* <- lang_en;; *);;
+
+nrel_perpendicular
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [перпендикуляр*] (* <- lang_ru;; *);
+    [perpendicular*] (* <- lang_en;; *);;
+
+nrel_pow
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [возведение в степень*] (* <- lang_ru;; *);
+    [exponentiation*] (* <- lang_en;; *);;
+
+nrel_generatric
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [образующая*] (* <- lang_ru;; *);
+    [generatric*] (* <- lang_en;; *);;
+
+nrel_bound
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [граница*] (* <- lang_ru;; *);
+    [bound*] (* <- lang_en;; *);;
+
+rrel_exponent_of_power
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [показатель степени*] (* <- lang_ru;; *);
+    [exponent of power*] (* <- lang_en;; *);;
+
+rrel_base_of_power
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [основание степени*] (* <- lang_ru;; *);
+    [base of power*] (* <- lang_en;; *);;
+
+rrel_result
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [результат*] (* <- lang_ru;; *);
+    [result*] (* <- lang_en;; *);;
+
+nrel_multiplication_numbers
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [произведение чисел*] (* <- lang_ru;; *);
+    [multiplication of numbers*] (* <- lang_en;; *);;
+
+nrel_value
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [значение*] (* <- lang_ru;; *);
+    [value*] (* <- lang_en;; *);;
+
+nrel_length
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [длина*] (* <- lang_ru;; *);
+    [length*] (* <- lang_en;; *);;
+
+nrel_distance
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [расстояние*] (* <- lang_ru;; *);
+    [distance*] (* <- lang_en;; *);;
+
+nrel_radius
+  <- sc_node_norole_relation;
+  
+  => nrel_main_idtf:
+    [радиус*] (* <- lang_ru;; *);
+    [radius*] (* <- lang_en;; *);;

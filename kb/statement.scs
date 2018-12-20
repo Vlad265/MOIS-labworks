@@ -1,0 +1,134 @@
+lab_1 = [*
+  concept_geometric_point -> O1; O2; A; A1; A2; B; B1; B2;;
+
+  perpendicular
+    <- nrel_perpendicular;
+    -> rrel_1:B1;
+    -> rrel_2:l2 (* <- concept_straight_line;; *);
+    -> rrel_3:l3 (* <- concept_straight_line;; *);;
+  connector_top_left
+    -> l2; circle_2;
+    => nrel_intersection: ... (* 
+      <- concept_countable_set_of_points;;
+      -> B2;;
+    *);;
+  connector_bottom_left
+    -> l2; circle_1;
+    => nrel_intersection: ... (* 
+      <- concept_countable_set_of_points;;
+      -> B1;;
+    *);;
+  connector_bottom_right
+    -> l1; circle_1;
+    => nrel_intersection: ... (* 
+      <- concept_countable_set_of_points;;
+      -> A1;;
+    *);;
+    connector_top_right
+    -> l1; circle_2;
+    => nrel_intersection: ... (*
+      <- concept_countable_set_of_points;;
+      -> A2;;
+    *);;
+    circle_1 -> A1; B1;;
+    circle_2 -> A2; B2;;
+
+  connector_left
+    -> l3; l1;
+    => nrel_intersection: ... (*
+      <- concept_countable_set_of_points;;
+      -> B;;
+    *);;
+  connector_right
+    -> l2; l1;
+    => nrel_intersection: ... (*
+      <- concept_countable_set_of_points;;
+      -> A;;
+    *);;
+
+  concept_half_plane
+    -> ... (* => nrel_bound: l1;; *);
+    -> ... (*
+      => nrel_bound: l1;; 
+      => nrel_inclusion: circle_1; circle_2;;
+    *);;
+
+  concept_half_plane
+    -> ... (*
+      => nrel_bound: l2;; 
+      => nrel_inclusion: circle_1;;
+    *);
+    -> ... (*
+      => nrel_bound: O1O2;; 
+      => nrel_inclusion: B2;;
+    *);
+    -> ... (*
+      => nrel_bound: l2;; 
+      => nrel_inclusion: circle_2;;
+    *);
+    -> ... (*
+      => nrel_bound: O1O2;; 
+      => nrel_inclusion: A1;;
+    *);;
+
+  number -> 1; 2; 3; 13; multiplication_result; multiplication_second;;
+  multiplication_left_connector
+    => nrel_multiplication_numbers: 1;
+    -> 2;
+    -> ... (* 
+      <- number;; 
+      <- rrel_exponent_of_power: power_connector;;
+    *);;
+  power_connector
+    <- nrel_pow;
+    -> rrel_base_of_power: 13;
+    -> rrel_result: ... (*
+      <- number;;
+      <- multiplication_left_connector;;
+    *);;
+  multiplication_left_connector
+    -> 2;
+    => nrel_multiplication_numbers: ... (*
+      <- number;;
+      <- ... (* => nrel_value: val;; *);;
+    *);;
+  val
+    <- value;
+    <= nrel_length: segm;;
+  segm
+    <- concept_segment;
+    <= nrel_inclusion: O1O2 (* <- concept_straight_line;; *);
+    => nrel_distance: distance_connector;;
+  distance_connector
+    -> O1 (* <= nrel_center_of_circle: circle_1;; *);
+    -> O2 (* <= nrel_center_of_circle: circle_2;; *);;
+  circle_1
+    => nrel_radius: ... (*
+      <- concept_segment;;
+      => nrel_length: value_1;;
+    *);;
+  circle_2
+    => nrel_radius: ... (*
+      <- concept_segment;;
+      => nrel_length: value_2;;
+    *);;
+  value_1
+    <= nrel_value: ... (* -> multiplication_result;; *);;
+  value_2
+    <= nrel_value: ... (* -> multiplication_second;; *);;
+  multiplication_connector
+    -> 2;
+    -> multiplication_second;
+    => nrel_multiplication_numbers: multiplication_result;;
+  power_connector_top
+    <- nrel_pow;
+    -> rrel_result: multiplication_second;
+    -> rrel_base_of_power: 3;
+    -> rrel_exponent_of_power: ... (*
+      <- number;; 
+      <- multiplication_connector_top;;
+    *);;
+  multiplication_connector_top
+    -> 2;
+    => nrel_multiplication_numbers: 1;;
+*];;
